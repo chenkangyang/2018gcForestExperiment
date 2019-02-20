@@ -1,6 +1,0 @@
-load("/Users/rehbach/Desktop/gecco-ic/Gecco2018IC/ResourcePackage/source/R/Framework/Data/train_gecco2018event.RDS")
-load("/Users/rehbach/Desktop/gecco-ic/Gecco2018IC/ResourcePackage/source/R/Framework/Data/waterDataTraining.RDS")
-data <- readRDS("waterDataTraining.RDS")
-nrow(data)
-summary(data)
-load("/Users/bangq/Downloads/ResourcePackage/source/R/Framework/Data/waterDataTraining.RDS")

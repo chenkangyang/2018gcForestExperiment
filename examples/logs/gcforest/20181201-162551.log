@@ -1,8 +1,0 @@
-[ 2018-12-01 16:25:52,701][cascade_classifier.fit_transform] X_groups_train.shape=[(138521, 9)],y_train.shape=(138521,),X_groups_test.shape=[(139566, 9)],y_test.shape=(139566,)
-[ 2018-12-01 16:25:52,705][cascade_classifier.fit_transform] group_dims=[9]
-[ 2018-12-01 16:25:52,706][cascade_classifier.fit_transform] group_starts=[0]
-[ 2018-12-01 16:25:52,706][cascade_classifier.fit_transform] group_ends=[9]
-[ 2018-12-01 16:25:52,706][cascade_classifier.fit_transform] X_train.shape=(138521, 9),X_test.shape=(139566, 9)
-[ 2018-12-01 16:25:52,724][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(138521, 9), X_cur_test.shape=(139566, 9)
-[ 2018-12-01 16:26:25,807][kfold_wrapper.log_eval_metrics] F1 (layer_0 - estimator_0 - 5_folds.train_0.predict)=97.95%
-[ 2018-12-01 16:27:06,299][kfold_wrapper.log_eval_metrics] F1 (layer_0 - estimator_0 - 5_folds.train_1.predict)=98.40%
