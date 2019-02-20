@@ -1,0 +1,42 @@
+[ 2018-11-30 15:42:21,168][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:42:21,170][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:42:21,171][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:42:21,172][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:42:21,174][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:42:21,179][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:42:38,656][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:42:38,659][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:42:38,661][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:42:38,662][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:42:38,669][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:42:38,678][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:44:16,817][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:44:16,823][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:44:16,825][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:44:16,827][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:44:16,830][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:44:16,846][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:46:54,345][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:46:54,348][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:46:54,350][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:46:54,351][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:46:54,352][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:46:54,364][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:50:08,099][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:50:08,102][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:50:08,103][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:50:08,105][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:50:08,106][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:50:08,116][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:50:44,870][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:50:44,872][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:50:44,873][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:50:44,874][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:50:44,875][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:50:44,883][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
+[ 2018-11-30 15:50:54,017][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:50:54,019][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:50:54,020][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:50:54,021][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:50:54,027][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:50:54,036][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)

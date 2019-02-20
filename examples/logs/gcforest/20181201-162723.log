@@ -1,0 +1,4 @@
+[ 2018-12-01 16:27:24,123][cascade_classifier.transform] X_groups_test.shape=[(139566, 9)]
+[ 2018-12-01 16:27:24,125][cascade_classifier.transform] group_dims=[9]
+[ 2018-12-01 16:27:24,125][cascade_classifier.transform] X_test.shape=(139566, 9)
+[ 2018-12-01 16:27:24,127][cascade_classifier.transform] [layer=0] look_indexs=[0], X_cur_test.shape=(139566, 9)

@@ -1,0 +1,6 @@
+[ 2018-11-30 15:41:35,626][cascade_classifier.fit_transform] X_groups_train.shape=[(92809, 9)],y_train.shape=(92809,),X_groups_test.shape=no_test,y_test.shape=no_test
+[ 2018-11-30 15:41:35,628][cascade_classifier.fit_transform] group_dims=[9]
+[ 2018-11-30 15:41:35,629][cascade_classifier.fit_transform] group_starts=[0]
+[ 2018-11-30 15:41:35,631][cascade_classifier.fit_transform] group_ends=[9]
+[ 2018-11-30 15:41:35,632][cascade_classifier.fit_transform] X_train.shape=(92809, 9),X_test.shape=(0, 9)
+[ 2018-11-30 15:41:35,638][cascade_classifier.fit_transform] [layer=0] look_indexs=[0], X_cur_train.shape=(92809, 9), X_cur_test.shape=(0, 9)
