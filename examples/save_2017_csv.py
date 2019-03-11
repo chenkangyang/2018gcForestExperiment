@@ -21,6 +21,12 @@ df = pd.read_table('../data/water/txt/2017waterDataTraining.txt',delim_whitespac
 # In[3]:
 
 
+df.describe()
+
+
+# In[4]:
+
+
 df = df.reset_index()
 Time = np.zeros(df.shape[0]).astype("str")
 for i in range(len(df)):
@@ -36,7 +42,7 @@ df = df.drop(['index'], axis=1)
 # 
 # 
 
-# In[4]:
+# In[5]:
 
 
 drop_columns = ['Time']
@@ -44,13 +50,13 @@ continuous_features = ['Tp', 'Cl', 'pH', 'Redox', 'Leit', 'Trueb', 'Cl_2', 'Fm',
 cat_features =[]
 
 
-# In[5]:
+# In[6]:
 
 
 all_df_dummies = pd.get_dummies(df, columns=cat_features)
 
 
-# In[6]:
+# In[7]:
 
 
 all_df_dummies.drop(drop_columns, 1, inplace=True)
@@ -58,23 +64,29 @@ all_df_dummies.drop(drop_columns, 1, inplace=True)
 all_df_dummies = all_df_dummies.dropna(axis=0)
 
 
-# In[7]:
+# In[8]:
 
 
 X_train = all_df_dummies.drop(['EVENT'], axis=1) # Series
 y_train = all_df_dummies['EVENT'].apply(lambda x: 0 if x == False else 1) # Series
 
 
-# In[8]:
+# In[9]:
 
 
 train = pd.concat([X_train,y_train], axis=1)
 
 
-# In[9]:
+# In[10]:
 
 
 train.head()
+
+
+# In[11]:
+
+
+train.describe()
 
 
 # In[10]:
@@ -152,7 +164,7 @@ train.to_csv('../data/water/csv/train2017.csv', encoding='utf-8', index=False)
 
 # ## load 2017 test
 
-# In[16]:
+# In[12]:
 
 
 lines = open("../data/water/txt/2017waterDataTesting.txt").readlines()
@@ -196,15 +208,27 @@ test = np.concatenate([X_test, y_test], axis=1)
 # y_test = y_test_pro
 
 
-# In[17]:
+# In[13]:
 
 
 test = pd.DataFrame(test, columns =['Tp', 'Cl', 'pH', 'Redox', 'Leit', 'Trueb', 'Cl_2', 'Fm', 'Fm_2', 'EVENT'])
 test.head()
 
 
+# In[14]:
+
+
+test.describe()
+
+
 # In[18]:
 
 
 test.to_csv('../data/water/csv/test2017.csv', encoding='utf-8', index=False)
+
+
+# In[ ]:
+
+
+
 

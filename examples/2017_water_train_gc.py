@@ -21,9 +21,27 @@ from gcforest.gcforest import GCForest
 from gcforest.utils.config_utils import load_json
 
 
-# #### evaluate function
+# #### somte sampling
 
 # In[2]:
+
+
+def Smoter(X, y, is_random=False):
+    if is_random == True:
+        # random_lst = list(np.random.randint(0, 1000, 4))
+        sm = SMOTE(random_state=random_seed)
+    elif is_random == False:
+        sm = SMOTE(random_state=0)
+
+    # sm = SMOTE(random_state=random_lst[2])
+    X_smote, y_smote = sm.fit_sample(X, y)
+
+    return X_smote, y_smote
+
+
+# #### evaluate function
+
+# In[3]:
 
 
 def evaluate(true, pred):
@@ -55,7 +73,7 @@ def evaluate(true, pred):
 # 
 # combine serveral datas‘ features together
 
-# In[3]:
+# In[4]:
 
 
 def Batch(X, y, size):
@@ -86,7 +104,7 @@ def Batch(X, y, size):
 
 # #### gc_config
 
-# In[4]:
+# In[5]:
 
 
 def get_toy_config():
@@ -128,7 +146,7 @@ def get_toy_config():
 
 # ### HyperParameter
 
-# In[5]:
+# In[6]:
 
 
 batch_size = 3
@@ -139,10 +157,10 @@ cv = 5
 
 # # load train
 
-# In[6]:
+# In[7]:
 
 
-data_all = pd.read_csv("../data/water/csv/train2018.csv")
+data_all = pd.read_csv("../data/water/csv/train2017.csv")
 
 X_train = data_all.values[:, 0:-1]
 y_train = data_all.values[:, -1]
@@ -150,7 +168,7 @@ y_train = data_all.values[:, -1]
 
 # #### train_valid_split
 
-# In[7]:
+# In[8]:
 
 
 # print("============ train_valid_split ============")
@@ -162,7 +180,7 @@ y_train = data_all.values[:, -1]
 # 
 # fulfill the Na with median, then standardized the data, output type ndarray
 
-# In[8]:
+# In[9]:
 
 
 clean_pipeline = Pipeline([('imputer', preprocessing.Imputer(missing_values='NaN',strategy="median")),
@@ -173,7 +191,7 @@ X_train = clean_pipeline.fit_transform(X_train)
 
 # #### Do somte sampling on the train data to solve data imblance problem
 
-# In[9]:
+# In[10]:
 
 
 # X_train_oversampled, y_train_oversampled = Smoter(X_train, y_train, is_random=True)
@@ -181,7 +199,7 @@ X_train = clean_pipeline.fit_transform(X_train)
 # print("train: %d, contains %.4f of 0 , after SMOTE: train: %d contains %.4f of 1" %(X_train.shape[0], (y_train == 0).sum()/y_train.shape[0], X_train_oversampled.shape[0], (y_train_oversampled == 0).sum()/y_train_oversampled.shape[0]))
 
 
-# In[10]:
+# In[11]:
 
 
 # X_train_oversampled_batch, y_train_oversampled_batch = Batch(X_train_oversampled, y_train_oversampled, batch_size)
@@ -193,12 +211,12 @@ X_train = clean_pipeline.fit_transform(X_train)
 # 
 # ## test gc
 
-# # load 2018 Test datasets
+# # load 2017 Test datasets
 
-# In[11]:
+# In[12]:
 
 
-test = pd.read_csv("../data/water/csv/test2018.csv")
+test = pd.read_csv("../data/water/csv/test2017.csv")
 
 X_test = test.values[:, 0:-1]
 y_test = test.values[:, -1]
@@ -206,7 +224,7 @@ y_test = test.values[:, -1]
 X_test = clean_pipeline.fit_transform(X_test)
 
 
-# In[12]:
+# In[13]:
 
 
 # X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size=test_size, stratify = y, random_state = random_seed)
@@ -219,11 +237,11 @@ gc.fit_transform(X_train, y_train, X_test, y_test)
 # y_valid_pred = gc.predict(X_valid)
 
 
-# In[13]:
+# In[14]:
 
 
 # dump
-with open("../pkl/2018_gc.pkl", "wb") as f:
+with open("../pkl/2017_gc.pkl", "wb") as f:
     pickle.dump(gc, f, pickle.HIGHEST_PROTOCOL)
     
 # # load

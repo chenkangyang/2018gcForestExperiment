@@ -18,27 +18,9 @@ from gcforest.gcforest import GCForest
 from gcforest.utils.config_utils import load_json
 
 
-# #### somte sampling
-
-# In[2]:
-
-
-def Smoter(X, y, is_random=False):
-    if is_random == True:
-        # random_lst = list(np.random.randint(0, 1000, 4))
-        sm = SMOTE(random_state=random_seed)
-    elif is_random == False:
-        sm = SMOTE(random_state=0)
-
-    # sm = SMOTE(random_state=random_lst[2])
-    X_smote, y_smote = sm.fit_sample(X, y)
-
-    return X_smote, y_smote
-
-
 # #### evaluate function
 
-# In[3]:
+# In[2]:
 
 
 def evaluate(true, pred):
@@ -70,7 +52,7 @@ def evaluate(true, pred):
 # 
 # combine serveral datas‘ features together
 
-# In[4]:
+# In[3]:
 
 
 def Batch(X, y, size):
@@ -101,7 +83,7 @@ def Batch(X, y, size):
 
 # ### HyperParameter
 
-# In[5]:
+# In[4]:
 
 
 batch_size = 3
@@ -113,7 +95,7 @@ random_seed = 42
 # 
 # fulfill the Na with median, then standardized the data, output type ndarray
 
-# In[6]:
+# In[5]:
 
 
 clean_pipeline = Pipeline([('imputer', preprocessing.Imputer(missing_values='NaN',strategy="median")),
@@ -124,12 +106,12 @@ clean_pipeline = Pipeline([('imputer', preprocessing.Imputer(missing_values='NaN
 # 
 # ## test gc
 
-# # load 2018 Test datasets
+# # load 2017 Test datasets
 
-# In[7]:
+# In[6]:
 
 
-test = pd.read_csv("../data/water/csv/test2018.csv")
+test = pd.read_csv("../data/water/csv/test2017.csv")
 
 X_test = test.values[:, 0:-1]
 y_test = test.values[:, -1]
@@ -139,32 +121,12 @@ X_test = clean_pipeline.fit_transform(X_test)
 
 # #### 1. test gcForest on 2018 Test datasets
 
-# In[8]:
+# In[7]:
 
 
 with open("../pkl/2018_gc.pkl", "rb") as f:
     gc = pickle.load(f)
     y_test_pred = gc.predict(X_test)
-    print("============= 2018 datasets' results on test =============")
+    print("============= 2017 datasets' results on test =============")
     evaluate(y_test, y_test_pred)
-
-
-# #### 2. test GcForest on 2018 batched test datasets
-
-# In[9]:
-
-
-# X_test_batch, y_test_batch = Batch(X_test, y_test, batch_size)
-    
-# with open("../pkl/2018_test_batch.pkl", "rb") as f:
-#     gc = pickle.load(f)
-#     y_test_pred = gc.predict(X_test_batch)
-#     print("============= 2017 datasets' results on %d batched test =============" %(batch_size))
-#     evaluate(y_test_batch, y_test_pred)
-
-
-# In[ ]:
-
-
-
 
