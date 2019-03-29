@@ -1,12 +1,12 @@
-# gcForest
-- Learn gcForest
-- Do the experiment on 2018 GECCO water detection
+
+
+> Do the experiment on 2017, 2018, 2019 GECCO water detection
 
 
 ## Environment
 
 ```
-# check out the virtual env in anaconda 
+# check out the virtual env in anaconda 
 
 conda info -e
 
@@ -35,8 +35,7 @@ conda install nb_conda
 # pip install --user [package]
 
 ```
- - Data download: [pan.baidu]()   
-   - password:ixir 
+ - Data download: [pan.baidu](https://pan.baidu.com/s/1i3qPGwqxUXHuXndZ6bKdHA) , password: 8jji
 ```
 .
 +-- data
