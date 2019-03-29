@@ -1,6 +1,9 @@
 /data
 /pkl
-/notebook
+# /notebook
+/notebook/logs
+/notebook/*.png
+/notebook/*.eps
 /logs
 /paper
 .idea/
