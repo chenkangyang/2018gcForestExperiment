@@ -144,7 +144,7 @@ class KFoldWrapper(object):
         for (eval_name, eval_metric) in eval_metrics:
             accuracy = eval_metric(y_true, y_proba)
             # LOGGER.info("Accuracy({}.{}.{})={:.2f}%".format(est_name, y_name, eval_name, accuracy * 100.))
-            LOGGER.info("F1 ({}.{}.{})={:.2f}%".format(est_name, y_name, eval_name, accuracy * 100.))
+            LOGGER.info("Weighted F1 ({}.{}.{})={:.2f}%".format(est_name, y_name, eval_name, accuracy * 100.))
 
     def predict_proba(self, X_test):
         assert 2 <= len(X_test.shape) <= 3, "X_test.shape should be n x k or n x n2 x k"

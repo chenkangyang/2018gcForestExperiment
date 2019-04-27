@@ -34,8 +34,8 @@ def calc_accuracy(y_true, y_pred, name, prefix=""):
     return acc
 
 def calc_f1(y_true, y_pred, name, prefix=""):
-    f1 = 100. * f1_score(y_true, y_pred)
-    LOGGER.info('{}F1 ({})={:.2f}%'.format(prefix, name, f1))
+    f1 = 100. * f1_score(y_true, y_pred, average="weighted")
+    LOGGER.info('{}Weighted F1 ({})={:.2f}%'.format(prefix, name, f1))
     return f1
 
 
@@ -267,7 +267,7 @@ class CascadeClassifier(object):
                     # log and save final result (opt layer)
                     # LOGGER.info("[Result][Optimal Level Detected] opt_layer_num={}, accuracy_train={:.2f}%, accuracy_test={:.2f}%".format(
                         # opt_layer_id + 1, train_acc_list[opt_layer_id], test_acc_list[opt_layer_id]))
-                    LOGGER.info("[Result][Optimal Level Detected] opt_layer_num={}, f1_train={:.2f}%, f1_test={:.2f}%".format(
+                    LOGGER.info("[Result][Optimal Level Detected] opt_layer_num={}, weighted_f1_train={:.2f}%, weighted_f1_test={:.2f}%".format(
                         opt_layer_id + 1, train_acc_list[opt_layer_id], test_acc_list[opt_layer_id]))
                     if data_save_dir is not None:
                         self.save_data( data_save_dir, opt_layer_id, *opt_datas)
@@ -285,7 +285,7 @@ class CascadeClassifier(object):
                 layer_id += 1
             # LOGGER.info("[Result][Reach Max Layer] opt_layer_num={}, accuracy_train={:.2f}%, accuracy_test={:.2f}%".format(
             #     opt_layer_id + 1, train_acc_list[opt_layer_id], test_acc_list[opt_layer_id]))
-            LOGGER.info("[Result][Reach Max Layer] opt_layer_num={}, f1_train={:.2f}%, f1_test={:.2f}%".format(
+            LOGGER.info("[Result][Reach Max Layer] opt_layer_num={}, weighted_f1_train={:.2f}%, weighted_f1_test={:.2f}%".format(
                 opt_layer_id + 1, train_acc_list[opt_layer_id], test_acc_list[opt_layer_id]))
             if data_save_dir is not None:
                 self.save_data(data_save_dir, self.max_layers - 1, *opt_datas)

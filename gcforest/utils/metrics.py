@@ -15,7 +15,7 @@ def accuracy_pb(y_true, y_proba):
 def f1_pb(y_true, y_proba):
     y_true = y_true.reshape(-1)
     y_pred = np.argmax(y_proba.reshape((-1, y_proba.shape[-1])), 1)
-    return f1_score(y_true, y_pred)
+    return f1_score(y_true, y_pred, average="weighted")
 
 
 def accuracy_win_vote(y_true, y_proba):
